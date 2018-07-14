@@ -25,9 +25,8 @@
 
 
 from gpiozero import DistanceSensor
-from time import sleep
 
 sensor = DistanceSensor(echo=18, trigger=17, threshold_distance=1.5)
 while True:
-	senson.wait_for_in_range()
+	sensor.wait_for_in_range()
 	print('Detected Distance: ', sensor.distance * 100)
